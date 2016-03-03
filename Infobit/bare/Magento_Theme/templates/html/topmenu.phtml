@@ -1,0 +1,76 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+
+?>
+<!-- <nav class="navigation" role="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?php /* @escapeNotVerified */ echo $_menu; ?>
+    </ul>
+</nav> -->
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-9">
+                        	<div>
+							<nav id="Mu">
+                                <div>
+                                    <ul class="list-unstyled main-menu">
+                                    <?php /* @escapeNotVerified */ echo $_menu; ?>
+                                    <?php if($customerSession->isLoggedIn()) {?>
+                                    	<li><a id="" href="<?php ?>" data-toggle="modal" ><!-- <span class="mnu_icon icon5"></span>--><span>Logout</span></a>
+                                            
+                                        </li>
+                                    
+                                    <?php }else?>
+   
+   
+                                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#"><!-- <span class="mnu_icon icon6"></span> --><span>Order</span></a>
+                                            
+                                        </li>
+                                        <?php }?>
+                                    
+                                    
+                                </ul>
+
+                                </div>
+                                <div>
+                                    <ul class="list-unstyled social_menu list-inline hide">
+                                        <li><a href="javascript:void(0);"><span class="social_icons twt"></span></a>
+                                        </li>
+                                        <li><a href="javascript:void(0);"><span class="social_icons fb"></span></a>
+                                        </li>
+                                        <li><a href="javascript:void(0);"><span class="social_icons gp"></span></a>
+                                        </li>
+                                        <li><a href="javascript:void(0);"><span class="social_icons pin"></span></a>
+                                        </li>
+                                        <li><a href="javascript:void(0);"><span class="social_icons ins"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            </div>
+                            <div class="">
+                            <!--Include your brand here-->
+                            <div id="nav-expander" class="top_side_menu navbar-header nav-expander fixed">
+                            <a class=" menu_toggle"> <span class="icon menu_icon"></span>
+                                </a>
+                            </div></div>
+                            
+                      </div>      
+                                <!-- Modal -->

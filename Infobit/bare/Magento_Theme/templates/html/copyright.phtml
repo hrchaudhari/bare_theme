@@ -1,0 +1,150 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+
+<div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 col-lg-offset-9 col-md-offset-8 col-sm-offset-0 col-xs-offset-0">
+                
+                
+                <span class="copy_write"><?php /* @escapeNotVerified */ echo $block->getCopyright() ?> </span>
+                
+            
+            </div>
+        </div>
+<div class="modal fade login_modal" id="L_MoDal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">sign in</h4>
+                    <a href="javascript:void(0);" class="modl_close" data-dismiss="modal"></a>
+                </div>
+                <div class="modal-body">
+                    <div id="L_Box" class="login_container">
+                        <div class="login_box">
+                        <?php $_loginblock = $block->getLayout()->createBlock('Magento\Customer\Block\Form\Login') ?>
+						 <form class="form form-login"
+              action="<?php /* @escapeNotVerified */ echo $_loginblock->getPostActionUrl() ?>"
+              method="post"
+              id="login-form"
+              data-mage-init='{"validation":{}}'>
+            <?php echo $_loginblock->getBlockHtml('formkey'); ?>
+                            <!-- <div>
+                                <a href="javascript:void(0);" class="cwf">
+                            connect with facebook
+                            <span class="f_ico"></span>
+                        </a>
+                            </div>
+                            <div>
+                                <span class="or">or</span>
+                            </div> -->
+                            <div>
+                                <input type="text" name="login[username]" placeholder="Email">
+                            </div>
+                            <div>
+                                <input type="password" name="login[password]" placeholder="password">
+                            </div>
+                             <a id="Forgot_Modal" href="#FP_MoDal" class="links" data-target="#FP_MoDal"  data-toggle="modal"  data-dismiss="modal">forgot password</a>
+                            <div>
+                                <input type="submit" value="LOGIN">
+                            </div>
+                            <a id="Reg_Modal" href="#R_MoDal" class="links" data-target="#R_MoDal"  data-toggle="modal"  data-dismiss="modal">New User? Create new</a>
+						</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade login_modal register" id="R_MoDal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">new user sign up</h4>
+                    <a href="javascript:void(0);" class="modl_close" data-dismiss="modal"></a>
+                </div>
+                <div class="modal-body">
+                    <div id="L_Box" class="login_container">
+                        <div class="login_box">
+                        <?php $_registerblock = $block->getLayout()->createBlock('Magento\Customer\Block\Form\Register') ?>
+                        
+<?php echo $_registerblock->getChildHtml('form_fields_before')?>
+<?php /* Extensions placeholder */ ?>
+<?php echo $_registerblock->getChildHtml('customer.form.register.extra')?>
+<form class="form create account form-create-account" action="<?php /* @escapeNotVerified */ echo $block->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+
+                            <!-- <div>
+                                <a href="javascript:void(0);" class="cwf">
+                            connect with facebook
+                            <span class="f_ico"></span>
+                        </a>
+                            </div>
+                            <div>
+                                <span class="or">or</span>
+                            </div> -->
+                            <input type="hidden" name="success_url" value="<?php /* @escapeNotVerified */ echo $_registerblock->getSuccessUrl() ?>">
+        				<input type="hidden" name="error_url" value="<?php /* @escapeNotVerified */ echo $_registerblock->getErrorUrl() ?>">
+        
+                            <div>
+                                <input type="email" name="email" placeholder="Your Email Address">
+                            </div>
+                            <div>
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                            <div>
+                                <input type="password" name="password_confirmation" placeholder="Confirm Password">
+                            </div>
+                            <div>
+                                <input type="submit" value="Sign up">
+                            </div>
+                            </form>
+                            <a id="Btl" href="#L_MoDal" class="links" data-target="#L_MoDal"  data-toggle="modal"  data-dismiss="modal">Back to Login</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade login_modal forgot_pwd" id="FP_MoDal" tabindex="-3" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">forgot password</h4>
+                    <a href="javascript:void(0);" class="modl_close" data-dismiss="modal"></a>
+                </div>
+                <div class="modal-body">
+                    <div id="L_Box" class="login_container">
+                        <div class="login_box">
+                        <?php $_forgetblock = $block->getLayout()->createBlock('Magento\Customer\Block\Account\Forgotpassword') ?>
+                        
+                         <form class="form password forget"
+      action="<?php /* @escapeNotVerified */ echo $block->getUrl('*/*/forgotpasswordpost') ?>"
+      method="post"
+      id="form-validate"
+      data-mage-init='{"validation":{}}'>
+                           <span class="fp_titl">Please enter your registered email.<br/>
+We’ll send a link to reset your password on your email.
+</span>
+                            <div>
+                                <input name="email" alt="email" type="text" placeholder="Email">
+                            </div>
+                         
+                          
+                            <div>
+                                <input type="submit" value="SUBMIT">
+                            </div>
+                            </form>
+                              <a id="Btl" href="#L_MoDal" class="links" data-target="#L_MoDal"  data-toggle="modal"  data-dismiss="modal">Back to Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
