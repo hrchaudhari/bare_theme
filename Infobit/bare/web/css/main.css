@@ -1,7 +1,7 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.nav-expander {
+.top_side_menu.nav-expander {
     color: #FFFFFF;
     cursor: auto;
     display: block;
@@ -17,6 +17,27 @@
     transition: right 0.3s ease-in-out 0s;
     width: 220px;
     z-index: 12;
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+}
+.top_side_cart.nav-expander {
+    color: #FFFFFF;
+    cursor: auto;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    height: auto;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 0;
+    transition: right 0.3s ease-in-out 0s;
+    width: 300px;
+    
     transition: right 0.3s ease-in-out 0s;
     -webkit-transition: right 0.3s ease-in-out 0s;
     -moz-transition: right 0.3s ease-in-out 0s;

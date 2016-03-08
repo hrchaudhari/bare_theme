@@ -31,20 +31,26 @@ $customerSession = $objectManager->get('Magento\Customer\Model\Session');
                                 <div>
                                     <ul class="list-unstyled main-menu">
                                     <?php /* @escapeNotVerified */ echo $_menu; ?>
+                                    
+                                    
                                     <?php if($customerSession->isLoggedIn()) {?>
-                                    	<li><a id="" href="<?php ?>" data-toggle="modal" ><!-- <span class="mnu_icon icon5"></span>--><span>Logout</span></a>
+                                    	<li><a id="<?php echo $this->_storeManager->getStore()->getBaseUrl()."/customer/account/logout/"?>" href="<?php ?>" data-toggle="modal" ><!-- <span class="mnu_icon icon5"></span>--><span>Logout</span></a>
                                             
                                         </li>
-                                    
-                                    <?php }else?>
-   
-   
-                                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#"><!-- <span class="mnu_icon icon6"></span> --><span>Order</span></a>
+                                    	<li><a href="javascript:void(0);" data-toggle="modal" data-target="#"><!-- <span class="mnu_icon icon6"></span> --><span>Order</span></a>
                                             
                                         </li>
+                                    <?php }else{?>
+   
+   										 <li><a id="LogiN" href="javascript:void(0);" data-toggle="modal" data-target="#L_MoDal"><!-- <span class="mnu_icon icon5"></span>--><span>Login</span></a>
+                                            <li>
+                                                <div class="res_togl">
+                                                    <a href="javascript:void(0);"></a>
+                                                </div>
+                                            </li>
+                                        </li>
+                                        
                                         <?php }?>
-                                    
-                                    
                                 </ul>
 
                                 </div>

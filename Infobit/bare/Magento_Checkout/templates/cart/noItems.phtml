@@ -6,10 +6,13 @@
 
 /**  @var $block \Magento\Checkout\Block\Cart */
 ?>
+<div class="spacer_side">
+
+    <div class="container-fluid"><div class="ord_if n_ord">
 <div class="cart-empty">
     <?php echo $block->getChildHtml('checkout_cart_empty_widget'); ?>
     <p><?php /* @escapeNotVerified */ echo __('You have no items in your shopping cart.') ?></p>
     <p><?php /* @escapeNotVerified */ echo __('Click <a href="%1">here</a> to continue shopping.',
             $block->escapeUrl($block->getContinueShoppingUrl())) ?></p>
     <?php echo $block->getChildHtml('shopping.cart.table.after'); ?>
-</div>
+</div></div></div></div>

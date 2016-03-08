@@ -8,6 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
     <referenceBlock name="page.main.title" remove="true"/>
+    <referenceBlock name="breadcrumbs" remove="true"/>
         <referenceContainer name="columns.top">
             <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
                 <block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml"/>

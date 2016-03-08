@@ -52,6 +52,7 @@ body {
 .button:focus {
     color: #ffffff;
     text-decoration: none;
+    background: #7c858c !important;
 }
 
 .link {
@@ -684,6 +685,7 @@ ul.footer_bx:after {
 }
 
 .login_container .login_box input[type="text"],
+.login_container .login_box input[type="email"],
 .login_container .login_box input[type="password"] {
     background: #f1f2f3 none repeat scroll 0 0;
     border: 0 none;
@@ -1394,7 +1396,7 @@ ul.footer_bx:after {
     padding-left: 56px;
 }
 
-.p_details_wrapper .p_ttl {
+.p_details_wrapper .p_ttl, .p_details_wrapper .page-title {
     display: block;
     font-size: 24px;
     text-transform: uppercase;
@@ -1479,15 +1481,15 @@ ul.footer_bx:after {
     height: 45px;
     background: transparent;
 }
-.pd_bx {
+.pd_bx, .description {
     color: #7C858C;
     padding: 20px 0;
     border-bottom: 1px solid #7c858c;
 }
-.pd_bx .ig_link{color: #7c858c;}
-.pd_bx .si_rt{padding-bottom: 20px; border-bottom: 1px solid #7c858c;position: absolute;bottom: 0;left: -282px;}
-.pd_bx .si_rt ul{margin: 0;padding: 0;display: inline-block;}
-.pd_bx .si_rt .rt_lbl {
+.pd_bx .ig_link,.description .ig_link{color: #7c858c;}
+.pd_bx .si_rt,.description .si_rt{padding-bottom: 20px; border-bottom: 1px solid #7c858c;position: absolute;bottom: 0;left: -282px;}
+.pd_bx .si_rt ul,.description .si_rt ul{margin: 0;padding: 0;display: inline-block;}
+.pd_bx .si_rt .rt_lbl,.description .si_rt .rt_lbl {
     display: inline-block;
     float: left;
     font-size: 16px;
@@ -4484,10 +4486,235 @@ ul.footer_bx:after {
     float: left;
 }
 /************   || 18.0 Reset Password page  END  ||  *************/
+/************   || 19.0 Skin Type  START  ||  *************/
 
+.sktp {
+    margin-top: 90px;
+}
+
+.sktp .sktp_ttl {
+    border-bottom: 1px solid #6d6e70;
+    color: #6d6e70;
+    display: block;
+    font-family: "NettoOT-Light";
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sktp_ul ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.sktp_ul ul:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.sktp_ul ul li {
+    display: inline-block;
+    float: left;
+    width: 24%;
+    margin-right: 1.33%;
+}
+.sktp_ul ul li:last-child{margin-right: 0;}
+.sktp_ul ul li .sktp_item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.sktp_ul ul li .sktp_item .skt_imb{}
+.sktp_ul ul li .sktp_item .skt_imb .sk_label {
+    width: 250px;
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    color: #6d6e70;
+    text-transform: capitalize;
+    font-size: 24px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 45%;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+}
+.sktp_ul ul li .sktp_item:hover .skt_info{opacity: 1;top: 0;}
+.sktp_ul ul li .sktp_item .skt_info {
+    background: #ffffff none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding-left: 50px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.sktp_ul ul li .sktp_item .skt_info_title{
+    border-bottom: 1px solid #6d6e70;
+    color: #6d6e70;
+    display: block;
+    font-family: "NettoOT-Light";
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.sktp_ul ul li .sktp_item .info_text{
+    color: #6d6e70;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+/************   || 19.0 Skin Type  END  ||  *************/
 .footer.content{border:none !important;}
 .header.content{padding: 0px !important;}
 .page-main{padding-left:0px !important;padding-right:0px !important;}
-button, .cart.table-wrapper .actions-toolbar > .action, .cart.table-wrapper .action-gift{background:transparent none repeat scroll 0 0;
+button, .cart.table-wrapper .actions-toolbar > .action, .cart.table-wrapper .action-gift,
+button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .cart.table-wrapper .action-gift:hover{background:transparent none repeat scroll 0 0;
 border:1px solid transparent;}
 .minicart-wrapper{margin-right:55px;}
+.login_box form{width:auto !important;}
+
+
+
+.cart-container .product_table .cart_p_img {
+    width: 20%;
+}
+
+.cart-container .product_table .tb_head {
+    background: #ffffff;
+    font-size: 18px;
+    color: #7C858C;
+    font-family: 'NettoOT-Bold';
+    height: 65px;
+    border-top: 1px solid #7C858C;
+    border-bottom: 1px solid #7C858C;
+}
+
+.cart-container .product_table .tb_head td, .cart-container .product_table .tb_head th {
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.cart-container table.o_d_table tbody tr {
+    position: relative;
+}
+
+.cart-container .product_table .remove_pro {
+    bottom: 1px;
+}
+.cart-container .product_table {
+    margin-top: 20px;
+}
+.cart-container .product_table .table > thead > tr > th,
+.cart-container .product_table .table > tbody > tr > th,
+.cart-container .product_table .table > tfoot > tr > th,
+.cart-container .product_table .table > thead > tr > td,
+.cart-container .product_table .table > tbody > tr > td,
+.cart-container .product_table .table > tfoot > tr > td {
+    border-top: 0px none;
+}
+
+.cart-container .product_table .table > tbody > tr > td {
+    height: auto;
+    vertical-align: middle;
+}
+
+.page-title-wrapper {
+    border-bottom: 1px solid #ccc;
+    color: #6d6e70;
+    font-family: "NettoOT-Light";
+    font-size: 24px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+.page-title-wrapper h1 span {font-size: 24px !important;}
+.product-info-main .page-title-wrapper{border: none;text-align: left;}
+.product-info-main .page-title-wrapper h1 span {color:#7c858c;display:block;font-size: 24px !important;}
+.product-info-main .available span{color: #7c858c;}
+.product-info-stock-sku {color: #7c858c;}
+.product-info-main .price{    color: #7c858c;
+    font-size: 24px;
+    text-transform: capitalize;}
+.action.primary.checkout,.action.continue.button,.action.primary.checkout:hover,.action.continue.button:hover{
+background: #7c858c none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "NettoOT-Bold";
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+	}
+	
+	
+.top_side_cart .minicart-wrapper {
+    display: inline-block;
+    float: left;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.minicart-wrapper .action.showcart::before{
+	background: url("../images/icons.png") -298px -777px; 
+}
+
+.top_side_cart a .icon.cart_icon {
+      background: url("../images/icons.png") -298px -777px; 
+    
+}
+
+.top_side_cart a:hover .icon.cart_icon {
+/*    background: url("../images/icons.png") no-repeat scroll -22px -66px rgba(0, 0, 0, 0);*/
+}
+.catalog-product-view .page-main,.checkout-cart-index .page-main{padding-top:90px;}
+.catalog-product-view .column.main{min-height:0px;}
+.label{color:#7c858c;font-weight:normal;font-size:18px;}
+.product-reviews-summary{   border-bottom: 1px solid #7c858c;
+    bottom: 0;
+    left: -282px;
+    padding-bottom: 20px;
+    position: absolute;}
+    .reviews-actions a {
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    margin-right: 60px;
+    text-transform: uppercase;
+}
+.block-minicart .amount .price-wrapper .price{color:#7c858c;}
+.abs-shopping-cart-items .action.update::before, .block-cart-failed .action.update::before, .cart-container .form-cart .action.update::before{
+	content:"" !important;
+	}
+	.abs-shopping-cart-items .action.continue::before, .block-cart-failed .action.continue::before, .cart-container .form-cart .action.continue::before{
+	content:"" !important;
+}
+.block-cart-failed .action.continue, .cart-container .form-cart .action.continue,
+.block-cart-failed .action.continue, .cart-container .form-cart .action.continue:hover{
+	color: #ffffff;
+    font-family: 'NettoOT-Bold';
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+    background: #7c858c ;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+	}

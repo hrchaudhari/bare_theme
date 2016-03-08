@@ -42,11 +42,11 @@
                             <div>
                                 <span class="or">or</span>
                             </div> -->
-                            <div>
-                                <input type="text" name="login[username]" placeholder="Email">
+                            <div class="required">
+                                <input class="required-entry" type="text" name="login[username]" placeholder="Email">
                             </div>
-                            <div>
-                                <input type="password" name="login[password]" placeholder="password">
+                            <div class="required">
+                                <input class="required-entry" type="password" name="login[password]" placeholder="password">
                             </div>
                              <a id="Forgot_Modal" href="#FP_MoDal" class="links" data-target="#FP_MoDal"  data-toggle="modal"  data-dismiss="modal">forgot password</a>
                             <div>
@@ -76,7 +76,7 @@
 <?php echo $_registerblock->getChildHtml('form_fields_before')?>
 <?php /* Extensions placeholder */ ?>
 <?php echo $_registerblock->getChildHtml('customer.form.register.extra')?>
-<form class="form create account form-create-account" action="<?php /* @escapeNotVerified */ echo $block->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+<form class="form create account form-create-account" action="<?php /* @escapeNotVerified */ echo $_registerblock->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
 
                             <!-- <div>
                                 <a href="javascript:void(0);" class="cwf">
@@ -87,17 +87,26 @@
                             <div>
                                 <span class="or">or</span>
                             </div> -->
+                            <?php $_widgetblock = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name') ?>
                             <input type="hidden" name="success_url" value="<?php /* @escapeNotVerified */ echo $_registerblock->getSuccessUrl() ?>">
         				<input type="hidden" name="error_url" value="<?php /* @escapeNotVerified */ echo $_registerblock->getErrorUrl() ?>">
-        
-                            <div>
-                                <input type="email" name="email" placeholder="Your Email Address">
+        					
+        					<div class="required">
+                                <input type="text" class="required-entry" name="<?php /* @escapeNotVerified */ echo $_widgetblock->getFieldName('firstname') ?>"
+                                 placeholder="First Name">
                             </div>
-                            <div>
-                                <input type="password" name="password" placeholder="Password">
+                            <div class="required">
+                                <input type="text" class="required-entry" name="<?php /* @escapeNotVerified */ echo $_widgetblock->getFieldName('lastname') ?>"
+                                 placeholder="Last Name">
                             </div>
-                            <div>
-                                <input type="password" name="password_confirmation" placeholder="Confirm Password">
+                            <div class="required">
+                                <input type="email" class="required-entry" name="email" placeholder="Your Email Address">
+                            </div>
+                            <div class="required">
+                                <input type="password" class="required-entry" name="password" placeholder="Password">
+                            </div>
+                            <div class="required">
+                                <input type="password" class="required-entry" name="password_confirmation" placeholder="Confirm Password">
                             </div>
                             <div>
                                 <input type="submit" value="Sign up">
@@ -125,7 +134,7 @@
                         <?php $_forgetblock = $block->getLayout()->createBlock('Magento\Customer\Block\Account\Forgotpassword') ?>
                         
                          <form class="form password forget"
-      action="<?php /* @escapeNotVerified */ echo $block->getUrl('*/*/forgotpasswordpost') ?>"
+      action="<?php /* @escapeNotVerified */ echo $_forgetblock->getUrl('*/*/forgotpasswordpost') ?>"
       method="post"
       id="form-validate"
       data-mage-init='{"validation":{}}'>
@@ -133,11 +142,11 @@
 We’ll send a link to reset your password on your email.
 </span>
                             <div>
-                                <input name="email" alt="email" type="text" placeholder="Email">
+                                <input name="email" class="required-entry" alt="email" type="text" placeholder="Email">
                             </div>
                          
                           
-                            <div>
+                            <div class="required">
                                 <input type="submit" value="SUBMIT">
                             </div>
                             </form>
