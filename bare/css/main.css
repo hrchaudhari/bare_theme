@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.nav-expander {
+    color: #FFFFFF;
+    cursor: auto;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    height: auto;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 0;
+    transition: right 0.3s ease-in-out 0s;
+    width: 220px;
+    z-index: 12;
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+}
+.nav-expander:hover {
+    cursor: pointer;
+}
+.nav-expander.fixed {
+    position: absolute;
+}
+.nav-expanded .nav-expander.fixed {
+    right: 24em;
+}
+nav {
+    background: #7c858c;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    right: -24em;
+    font-size: 15px;
+    top: 0;
+    width: 24em;
+    z-index: 2000;
+    opacity: 0.9;
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+}
+.nav-expanded nav {
+    right: 0;
+}
+body.nav-expanded,
+{
+    margin-left: 0em;
+    transition: right 0.4s ease-in-out 0s;
+    -webkit-transition: right 0.4s ease-in-out 0s;
+    -moz-transition: right 0.4s ease-in-out 0s;
+    -o-transition: right 0.4s ease-in-out 0s;
+}
+#nav-close {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 10px;
+}
+.main-menu {margin: 150px 20px 0 20px;}
+
+.main-menu li {
+    float: none;
+    width: 100%;
+    margin-bottom:0px;
+}
+.main-menu li::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.main-menu li a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    display: block;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+            transition: ease-in-out 0.2s;
+         -o-transition: ease-in-out 0.2s;
+       -moz-transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+}
+
+.main-menu li a:hover,
+.main-menu li a:active,
+.main-menu li a:focus {
+    text-decoration: none;
+   /* color: #0fbebc;*/
+}
+.main-menu li a span {
+    display: inline-block;
+}
+.main-menu li a .mnu_icon {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    height: 35px;width: 35px;
+            transition: ease-in-out 0.2s;
+         -o-transition: ease-in-out 0.2s;
+       -moz-transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+}
+
+.main-menu li a .mnu_icon.icon1 {
+    background: url("../images/icons.png") -198px -776px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon1 {
+   
+}
+
+.main-menu li a .mnu_icon.icon2 {
+    background: url("../images/icons.png") -11px -776px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon2 {
+    
+}
+
+.main-menu li a .mnu_icon.icon3 {
+    background: url("../images/icons.png") -59px -776px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon3 {
+    
+}
+
+.main-menu li a .mnu_icon.icon4 {
+    background: url("../images/icons.png") -250px -776px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon4 {
+    
+}
+
+.main-menu li a .mnu_icon.icon5 {
+    background: url("../images/icons.png") -108px -776px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon5 {
+    
+}
+.main-menu li a .mnu_icon.icon6 {
+    background: url("../images/icons.png") -440px -777px no-repeat;
+}
+.main-menu li a:hover .mnu_icon.icon6 {
+    background: url("../images/icons.png") -440px -777px no-repeat;
+}
+.main-menu:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+.social_menu {
+    display: block;
+    padding: 40px;
+    border-top: 1px solid #0fbebc;
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.social_menu li {}
+
+.social_menu li a .social_icons {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    
+            transition: ease-in-out 0.2s;
+         -o-transition: ease-in-out 0.2s;
+       -moz-transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+}
+
+.social_menu li a .social_icons.twt {
+    background: url("../images/icons.png") no-repeat scroll -619px -11px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a:hover .social_icons.twt {
+    background:url("../images/icons.png") no-repeat scroll -619px -71px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a .social_icons.fb {
+    background: url("../images/icons.png") no-repeat scroll -677px -11px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a:hover .social_icons.fb {
+    background:url("../images/icons.png") no-repeat scroll -677px -71px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a .social_icons.gp {
+    background: url("../images/icons.png") no-repeat scroll -733px -11px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a:hover .social_icons.gp {
+    background:url("../images/icons.png") no-repeat scroll -733px -71px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a .social_icons.pin {
+    background: url("../images/icons.png") no-repeat scroll -788px -11px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a:hover .social_icons.pin {
+    background:url("../images/icons.png") no-repeat scroll -788px -71px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a .social_icons.ins {
+    background: url("../images/icons.png") no-repeat scroll -845px -11px rgba(0, 0, 0, 0);
+}
+
+.social_menu li a:hover .social_icons.ins {
+    background:url("../images/icons.png") no-repeat scroll -845px -71px rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 320px) {
+    nav{width: 22em;right: -22em;}
+    
+}
