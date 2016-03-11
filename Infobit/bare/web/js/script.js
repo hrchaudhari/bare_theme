@@ -17,24 +17,29 @@ jQuery(document).ready(function(){
    
 	jQuery("#Mu").mouseleave(function(){
   
-		jQuery('#exp').removeClass('nav-expanded');
+		jQuery('.page-wrapper').removeClass('nav-expanded');
     });
    
     
 	jQuery(window).scroll(function(){
-      if(jQuery("#exp").hasClass("nav-expanded"))
+      if(jQuery(".page-wrapper").hasClass("nav-expanded"))
       {
          
-    	  jQuery("#exp").removeClass("nav-expanded");
+    	  jQuery(".page-wrapper").removeClass("nav-expanded");
       }
        });
 	jQuery(".res_togl > a").click(function(){
-		jQuery("#exp").removeClass("nav-expanded");
+		jQuery(".page-wrapper").removeClass("nav-expanded");
     });
 
     
     
-   
+	jQuery('.spinner .btn:first-of-type').on('click', function() {
+	    jQuery('.spinner input').val( parseInt(jQuery('.spinner input').val(), 10) + 1);
+	  });
+	  jQuery('.spinner .btn:last-of-type').on('click', function() {
+	    jQuery('.spinner input').val( parseInt(jQuery('.spinner input').val(), 10) - 1);
+	  });
     
     //sctipt for login open
     jQuery("#LogiN").click(function(){
@@ -185,15 +190,7 @@ jQuery('.class_checkbox').on('click',function(){
     };
 })(jQuery);
 
-//2.0 input spinner
-(function (jQuery) {
-  jQuery('.spinner .btn:first-of-type').on('click', function() {
-    jQuery('.spinner input').val( parseInt(jQuery('.spinner input').val(), 10) + 1);
-  });
-  jQuery('.spinner .btn:last-of-type').on('click', function() {
-    jQuery('.spinner input').val( parseInt(jQuery('.spinner input').val(), 10) - 1);
-  });
-})(jQuery);
+
 
 (function(jQuery){
 			jQuery(window).load(function(e){

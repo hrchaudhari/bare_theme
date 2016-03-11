@@ -97,7 +97,7 @@
                         <argument name="add_attribute" xsi:type="string">itemprop="description"</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description" template="product/view/attribute.phtml" group="detailed_info">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description" template="product/view/attribute.phtml" group="detailed_info" after="product.info.price">
                     <arguments>
                         <argument name="at_call" xsi:type="string">getDescription</argument>
                         <argument name="at_code" xsi:type="string">description</argument>

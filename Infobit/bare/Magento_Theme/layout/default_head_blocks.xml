@@ -16,7 +16,7 @@
          
         <css src="css/style.css" /> 
         <css src="css/mediaquery.css" />
-        <script src="js/jQuery_002.js"/>
+        <script src="js/jquery_002.js"/>
         <script src="js/bootstrap.min.js"/>
         
         <script src="js/jquery.mCustomScrollbar.min.js"/>
