@@ -305,7 +305,7 @@ label.css-label {
 }
 .header .logo img {
     /*max-height: 50px;*/
-    padding-bottom:10px;
+    padding-bottom:6px;
     display: inline-block;
     margin-left: 110px;
     margin-top: 5px;
@@ -534,7 +534,7 @@ ul.footer_bx:after {
 /************   || 4.0 INDEX START  ||  *************/
 
 .bare_slider {
-    margin-top: 60px;
+    margin-top: 35px;
     margin-bottom: 100px;
 }
 
@@ -1662,7 +1662,7 @@ ul.footer_bx:after {
 }
 .cart_dropdown .cart_pro .pro_if span.pr_nm{ font-family: 'NettoOT-Bold';}
 .cart_dropdown .cart_pro .pro_if span.pr_q{margin-top: 30px;}
-.cart_dropdown .cart_pro .pro_if span {
+.cart_dropdown .cart_pro .pro_if span, .cart_dropdown .cart_pro .pro_if span a {
     display: block;
     color: #7c858c;
     font-size: 16px;
@@ -4584,7 +4584,7 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
 .page-main{padding-left:0px !important;padding-right:0px !important;}
 button, .cart.table-wrapper .actions-toolbar > .action, .cart.table-wrapper .action-gift,
 button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .cart.table-wrapper .action-gift:hover{background:transparent none repeat scroll 0 0;
-border:1px solid transparent;}
+border:1px solid transparent;padding-left:0px;}
 .minicart-wrapper{margin-right:55px;}
 .login_box form{width:auto !important;}
 
@@ -4821,6 +4821,24 @@ background: #7c858c none repeat scroll 0 0;
     color:#7c858c;
 }
 .order_summary_table .block .title strong{font-size: 22px !important;}
-.action.primary{background: #1979c3 none repeat scroll 0 0;
-    border: 1px solid #1979c3;}
-.minicart-items .item-qty{color:#1979c3;}
+.action.primary{background: #7c858c none repeat scroll 0 0;
+    border: 1px solid #7c858c;}
+.minicart-items .item-qty{color:#7c858c;}
+.block-minicart .subtitle.empty{color:#7c858c;}
+.minicart-wrapper .block-minicart{padding:0px;width:500px !important;}
+.minicart-items-wrapper{margin:0px !important;border:none!important;}
+.minicart-items .product-item-details{padding-left:40px;}
+.action.viewcart span {
+    color: #7c858c;
+}
+.subtotal > span {
+    float: left;margin-left:70px;
+}
+.amount.price-container {
+    float: left;
+}
+.block-minicart .amount .price-wrapper:first-child .price{ font-size: 22px;padding-left:5px;}
+.minicart-items .product-item-details .details-qty{text-align:left;}
+.minicart-items .product-item-pricing .label{padding-left:0px;}
+.block-minicart .block-content > .actions > .primary{margin:0px !important;}
+.footer.content{margin-top:0px;padding-top:0px;}

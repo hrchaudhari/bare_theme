@@ -25,7 +25,7 @@
         </span>
     </a>
     <?php if ($block->getIsNeedToDisplaySideBar()): ?>
-        <div class="block block-minicart empty"
+        <div class="cart_dropdown dropdown-menu block block-minicart empty"
              data-role="dropdownDialog"
              data-mage-init='{"dropdownDialog":{
                 "appendTo":"[data-block=minicart]",
@@ -37,6 +37,7 @@
                 "parentClass":"active",
                 "buttons":[]}}'>
             <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+            	<span class="c_title">your cart</span>
                 <!-- ko template: getTemplate() --><!-- /ko -->
             </div>
         </div>

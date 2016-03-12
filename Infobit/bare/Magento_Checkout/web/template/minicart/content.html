@@ -26,43 +26,6 @@
     </button>
 
     <!-- ko if: cart().summary_count -->
-        <div class="items-total">
-            <span class="count"><!-- ko text: cart().summary_count --><!-- /ko --></span>
-            <!-- ko if: cart().summary_count == 1 -->
-                <!-- ko i18n: 'item' --><!-- /ko -->
-            <!-- /ko -->
-            <!-- ko if: cart().summary_count > 1 -->
-                <!-- ko i18n: 'items' --><!-- /ko -->
-            <!-- /ko -->
-        </div>
-
-        <!-- ko if: cart().possible_onepage_checkout -->
-            <!-- ko foreach: getRegion('subtotalContainer') -->
-                <!-- ko template: getTemplate() --><!-- /ko -->
-            <!-- /ko -->
-        <!-- /ko -->
-
-        <!-- ko foreach: getRegion('extraInfo') -->
-            <!-- ko template: getTemplate() --><!-- /ko -->
-        <!-- /ko -->
-
-        <!-- ko if: cart().possible_onepage_checkout -->
-        <div class="actions">
-            <div class="primary">
-                <button
-                        id="top-cart-btn-checkout"
-                        type="button"
-                        class="action primary checkout"
-                        data-bind="attr: {title: $t('Go to Checkout')}">
-                    <!-- ko i18n: 'Go to Checkout' --><!-- /ko -->
-                </button>
-                <div data-bind="html: cart().extra_actions"></div>
-            </div>
-        </div>
-        <!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko if: cart().summary_count -->
     <strong class="subtitle"><!-- ko i18n: 'Recently added item(s)' --><!-- /ko --></strong>
     <div data-action="scroll" class="minicart-items-wrapper">
         <ol id="mini-cart" class="minicart-items" data-bind="foreach: { data: cart().items, as: 'item' }">
@@ -105,6 +68,43 @@
             <!-- ko template: getTemplate() --><!-- /ko -->
         <!-- /ko -->
     </div>
+    
+    <!-- ko if: cart().summary_count -->
+        <div class="items-total">
+            <span class="count"><!-- ko text: cart().summary_count --><!-- /ko --></span>
+            <!-- ko if: cart().summary_count == 1 -->
+                <!-- ko i18n: 'item' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: cart().summary_count > 1 -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+        </div>
+
+        <!-- ko if: cart().possible_onepage_checkout -->
+            <!-- ko foreach: getRegion('subtotalContainer') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko foreach: getRegion('extraInfo') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko if: cart().possible_onepage_checkout -->
+        <div class="actions">
+            <div class="primary">
+                <button
+                        id="top-cart-btn-checkout"
+                        type="button"
+                        class="action primary checkout"
+                        data-bind="attr: {title: $t('Go to Checkout')}">
+                    <!-- ko i18n: 'Go to Checkout' --><!-- /ko -->
+                </button>
+                <div data-bind="html: cart().extra_actions"></div>
+            </div>
+        </div>
+        <!-- /ko -->
+    <!-- /ko -->
 </div>
 <!-- ko foreach: getRegion('sign-in-popup') -->
 <!-- ko template: getTemplate() --><!-- /ko -->
