@@ -1,0 +1,73 @@
+<?php
+/**
+ * @category    design
+ * @package     accessshop_lite_default
+ * @copyright   Copyright (c) 2015 AccessShop Themes (http://www.accessshopthemes.com)
+ **
+ * Product media data template
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<style>
+.img-thumbnail {
+border:none;
+}
+.p_d_butons a{
+width:48%;
+}
+</style>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<ol class="carousel-indicators">
+	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+
+<?php $i=1; foreach ($this->getGalleryImages() as $_image): ?>
+                            <?php if ($this->isGalleryImageVisible($_image)): ?>
+                            <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i;?>"></li>
+                            <?php endif;?>
+ <?php $i++; endforeach; ?>
+
+<?php endif;?>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+<div class="item active">
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+<p class="product-image img-thumbnail">
+    <?php
+        $_img = '<img id="product_main_image" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(500,600).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" class="img-responsive" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+ 
+    <p>
+<?php else: ?>
+<p class="product-image">
+    <?php
+        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(265).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" title="'.$this->escapeHtml($this->getImageLabel()).'" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+</p>
+<?php endif; ?>
+</div>
+
+<!--Display Additional images of the product-->
+<?php if (count($this->getGalleryImages()) > 0): ?>
+
+<?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+            <?php if ($this->isGalleryImageVisible($_image)): ?>
+            <div class="item">
+            <p class="product-image img-thumbnail">
+            <img id="image-<?php echo $i; ?>"
+                 class="img-responsive"
+                 src="<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image->getFile())->resize(500,600);?>"
+                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
+                 </p></div>
+            <?php endif; ?>
+        <?php $i++; endforeach; ?>
+
+<?php endif;?>
+</div>

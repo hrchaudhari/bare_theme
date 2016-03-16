@@ -9,7 +9,7 @@
     <body>
         <referenceContainer name="checkout.cart.items">
             <container name="checkout.cart.container" htmlTag="div" htmlClass="cart-container table-responsive product_table" before="-">
-                <container name="cart.summary" label="Cart Summary Container" htmlTag="div" htmlClass="cart-summary" after="-">
+                <container name="cart.summary" label="Cart Summary Container" htmlTag="div" htmlClass="cart-summary table-responsive order_summary_table" after="-">
                     <block class="Magento\Framework\View\Element\Template" name="checkout.cart.summary.title" before="-" template="Magento_Theme::text.phtml">
                         <arguments>
                             <argument translate="true" name="text" xsi:type="string">Summary</argument>

@@ -21,7 +21,7 @@ a {
 }
 
 body {
-    font-family: 'NettoOT';
+    font-family: 'NettoOT' !important;
 }
 
 .nomargin {
@@ -193,7 +193,7 @@ textarea {
     padding: 8px 18px;
 }
 
-input[type="text"] {
+input[type="text"],input[type="email"] {
     
     width: auto;
     border-radius: 0px;
@@ -1022,7 +1022,7 @@ ul.footer_bx:after {
 
 
 /************   || 5.0 PRODUCT START  ||  *************/
-.product_page{margin-top: 120px;}
+.product_page{margin-top: 72px;}
 .product_banner {
     position: relative;
     margin-top: 60px;
@@ -3995,7 +3995,7 @@ ul.footer_bx:after {
 
 /************   || 14.0 ALCHEMY  START  ||  *************/
 .alc_bannr {
-    margin: 60px 0 100px 0;
+    margin: 36px 0 100px 0;
     background: url("../images/alchemy_banner.jpg") 0 0 no-repeat;
     display: block;
     height: 79vh;
@@ -4581,7 +4581,7 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
 /************   || 19.0 Skin Type  END  ||  *************/
 .footer.content{border:none !important;}
 .header.content{padding: 0px !important;}
-.page-main{padding-left:0px !important;padding-right:0px !important;}
+.page-main{padding-left:0px !important;padding-right:0px !important;width:100% !important;max-width:100% !important;}
 button, .cart.table-wrapper .actions-toolbar > .action, .cart.table-wrapper .action-gift,
 button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .cart.table-wrapper .action-gift:hover{background:transparent none repeat scroll 0 0;
 border:1px solid transparent;padding-left:0px;}
@@ -4644,7 +4644,7 @@ border:1px solid transparent;padding-left:0px;}
 }
 .page-title-wrapper h1 span {font-size: 24px !important;}
 .product-info-main .page-title-wrapper{border: none;text-align: left;}
-.product-info-main .page-title-wrapper h1 span {color:#7c858c;display:block;font-size: 24px !important;}
+.product-info-main .page-title-wrapper h1 span {color:#7c858c;display:block;font-size: 24px !important;font-weight: bold;}
 .product-info-main .available span{color: #7c858c;}
 .product-info-stock-sku {color: #7c858c;}
 .product-info-main .price{    color: #7c858c;
@@ -4826,7 +4826,8 @@ background: #7c858c none repeat scroll 0 0;
 .minicart-items .item-qty{color:#7c858c;}
 .block-minicart .subtitle.empty{color:#7c858c;}
 .minicart-wrapper .block-minicart{padding:0px;width:500px !important;}
-.minicart-items-wrapper{margin:0px !important;border:none!important;}
+.minicart-items-wrapper{margin:0px !important;border:none!important;max-height: 450px;
+}
 .minicart-items .product-item-details{padding-left:40px;}
 .action.viewcart span {
     color: #7c858c;
@@ -4840,5 +4841,105 @@ background: #7c858c none repeat scroll 0 0;
 .block-minicart .amount .price-wrapper:first-child .price{ font-size: 22px;padding-left:5px;}
 .minicart-items .product-item-details .details-qty{text-align:left;}
 .minicart-items .product-item-pricing .label{padding-left:0px;}
+.minicart-items .action.delete::before{color: #7c858c;
+    content: "X";
+    font-family: "NettoOT";}
 .block-minicart .block-content > .actions > .primary{margin:0px !important;}
 .footer.content{margin-top:0px;padding-top:0px;}
+.product-info-main .price-box .price-wrapper .price, .product-options-bottom .price-box .price-wrapper .price{font-size:24px !important;}
+.cart-summary{padding:0px;color: #7c858c;font-family: 'NettoOT' !important;}
+.cart-price .price{color: #7c858c;}
+.checkout-container {
+    margin: 70px 0 20px;
+    padding: 0 20px;
+}
+#checkoutSteps .step-title {
+    border-bottom: 1px solid #7c858c;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+    color: #7c858c;
+    font-weight:bold;
+}
+.opc-wrapper input[type="text"], .opc-wrapper input[type="email"], .opc-wrapper select{width:92% !important;}
+.table-checkout-shipping-method > thead > tr > th {
+    color: #7c858c;
+    font-family: "NettoOT-Bold";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 55px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+.table-checkout-shipping-method .table > tbody > tr > td {
+    border-bottom: 1px solid #7c858c;
+    border-top: 0 none;
+    color: #7c858c;
+    font-size: 18px;
+    padding: 8px 20px;
+}
+select {
+    -moz-appearance: none;
+    background: #f1f2f3 none repeat scroll 0 0;
+    background-image: none;
+    border: medium none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 18px;
+    position: relative;
+    text-transform: capitalize;
+    width: 100%;
+        color: #7c858c;
+    font-size: 22px;
+}
+
+#newsletter::-webkit-input-placeholder {
+   color: #6d6e70 !important;
+}
+
+#newsletter:-moz-placeholder { /* Firefox 18- */
+   color: #6d6e70 !important;  
+}
+
+#newsletter::-moz-placeholder {  /* Firefox 19+ */
+   color: #6d6e70 !important;  
+}
+
+#newsletter:-ms-input-placeholder {  
+   color: #6d6e70 !important;  
+}
+.col.col-price .price{font-size:18px;color: #7c858c;font-family: "NettoOT";}
+.col.col-method{font-size:18px;color: #7c858c;font-family: "NettoOT";}
+.product-item-name{font-size:18px;color: #7c858c;font-family: "NettoOT";}
+.product-item-details{padding-left:5px !important;}
+.payment-method-billing-address{color: #7c858c;}
+.billing-address-details{color: #7c858c;}
+.shipping-information{color: #7c858c;}
+.opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title{
+border-bottom: 1px solid #7c858c;
+    color: #7c858c;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+}
+.opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title{
+	border-bottom: 1px solid #7c858c;
+    color: #7c858c;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+}
+.columns .column.main{padding-bottom: 0px;}
+.price-container{margin-top:30px;}
+.block-minicart .block-content > .actions > .primary .action.primary{margin-bottom:0px !important;}
+.minicart-wrapper .action.showcart .counter.qty{background:none !important;color: transparent !important;}
+.page-layout-1column .product.media{width:50% !important;margin-top:-30px;}
+.page-layout-1column .product-info-main {
+    margin-right: 10%;
+    width: 38%;
+}

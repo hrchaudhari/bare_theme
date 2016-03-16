@@ -106,7 +106,7 @@ jQuery('.class_checkbox').on('click',function(){
     jQuery(".ddd").on("click", function () {
 
     var $button = jQuery(this);
-    var oldValue = $button.closest('.sp-quantity').find("input.quntity-input").val();
+    var oldValue = $button.closest('.sp-quantity').find("input.quntity-inpu").val();
 
     if ($button.text() == "+") {
         var newVal = parseFloat(oldValue) + 1;
@@ -119,7 +119,7 @@ jQuery('.class_checkbox').on('click',function(){
         }
     }
 
-    $button.closest('.sp-quantity').find("input.quntity-input").val(newVal);
+    $button.closest('.sp-quantity').find("input.quntity-inpu").val(newVal);
 
 });
     //active inactive toggle for order page

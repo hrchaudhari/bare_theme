@@ -1,0 +1,368 @@
+<?php
+/**
+ * @category    design
+ * @package     accessshop_lite_default
+ * @copyright   Copyright (c) 2015 AccessShop Themes (http://www.accessshopthemes.com)
+ *
+ * Product view template
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<style>
+.p_d_butons a {
+width: 49%;
+font-size: 11px;
+font-weight: bold;
+}
+</style>
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+
+  <div class="product_detail">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-20">
+                <div class="ombre_breadcrumb">
+                    <ol class="breadcrumb">
+                         </ol>
+                </div>
+            </div>
+        </div>
+		<form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+            <?php echo $this->getBlockHtml('formkey') ?>
+            
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+
+            
+        <div class="row">
+            <div class="col-lg-15 col-md-13 col-sm-13 col-xs-20">
+                <div class="product_detail_image_slider">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        
+                            
+                            
+<?php echo $this->getChildHtml('media') ?>
+                           
+
+
+                        
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-5 col-md-7 col-sm-7 col-xs-20">
+                <div class="product_detail_div">
+                    <div class="pro_det_div1">
+                        <span class="p_d_title">
+                            <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                        </span>
+                        <span class="p_d_price">
+                                <?php echo $this->getChildHtml('product_type_data') ?>
+                            <?php echo $this->getTierPriceHtml() ?>
+                        </span>
+                                   <div class="p_d_add"> <?php echo $this->getChildHtml('addtocart') ?>
+                                  
+                                 </div>
+                                    
+                               
+                        
+                        <span class="p_d_info">
+                            This simple, old-fashioned cake tastes so good
+it will surprise you! 
+                        </span>
+                    </div>
+                    <div class="product_detail_accordion">
+                        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+        <a class="ptitle1" role="button" data-parent="#accordion2"   aria-expanded="true" aria-controls="collapseOne">
+         Product Detail<span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+
+                                        <div class="detail_row">
+                                            <div class="product_weight">
+                                                <span class="detail_label">
+                                                  weight
+                                              </span>
+                                                <span class="weight_select">
+                                                        <select class="selectpicker" name="weight">
+                                                            <option>1KG</option>
+                                                            <option>2KG</option>
+                                                            <option>3KG</option>
+                                                            <option>4KG</option>
+                                                            <option>5KG</option>
+                                                       </select>
+                                              </span>
+                                            </div>
+                                            <div class="product_color">
+                                                <span class="detail_label">
+                                                  color
+                                              </span>
+                                              <span class="select_color">
+                                                  <ul class="list-unstyled list-inline" style="padding-top: 25px;">
+                                                      <li><a href="javascript:void(0);"><span class="green">
+					<input type="radio" name="color" id="green" class="css-radiobox" value="green" />
+							</span></a></li>
+                                                      <li><a href="javascript:void(0);"><span class="grey">
+					<input type="radio" name="color" id="grey" class="css-radiobox" value="grey" checked />
+							</span></a></li>
+                                                  </ul>
+                                              </span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="detail_row">
+                                            <span class="detail_label">
+                                                  Flavour
+                                              </span>
+                                               <span class="flavour_select">
+                                                        <select class="selectpicker" name="flavour">
+                                                            <option>Mocha</option>
+                                                            <option>Vanilla</option>
+                                                            <option>chocolate</option>
+                                                            <option>black forest</option>
+                                                            <option>orange</option>
+                                                       </select>
+                                              </span>
+                                        </div>
+                                        <div class="detail_row radio_diet">
+                                            <span>
+                                                <input type="radio" name="diet" id="veg" class="css-radiobox" value="Egg" />
+                                                <label for="veg" class="radio-label diet">Egg</label>
+                                            </span>
+                                             <span>
+                                                <input type="radio" name="diet" id="nveg" class="css-radiobox" value="Eggless" checked/>
+                                                <label for="nveg" class="radio-label diet">Eggless</label>
+                                            </span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+        <a class="collapsed ptitle2" role="button"  data-parent="#accordion2"  aria-expanded="false" aria-controls="collapseTwo">
+          message on cake<span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="detail_row">
+                                        <input type="text" placeholder="Message on cake" name="msg-on-cake">
+                                        </div>
+                                         <div class="detail_row">
+                                        <input type="text" placeholder="To Message" name="toMsg">
+                                        </div>
+                                         <div class="detail_row">
+                                        <input type="text" placeholder="From Message" name="fromMsg">
+                                        </div>
+                                          <div class="detail_row" style="display:none">
+                                       <a href="javascript:void(0);" class="go_msg_link">
+                                           <img src="<?php echo $this->getSkinUrl(); ?>images/left_arrow.png" alt="img">
+                                       </a>
+                                        </div>
+                                        <div class="detail_row">
+                                            <div class="product_weight font-weight" style="width: 100%;">
+                                               
+                                                <span class="weight_select" style="width: 100%;">
+                                                        <select class="selectpicker" name="font-weight">
+                                                            <option disabled selected>Font Weight</option>
+                                                            <option>10</option>
+                                                            <option>12</option>
+                                                            <option>14</option>
+                                                            <option>16</option>
+                                                            <option>18</option>
+                                                       </select>
+                                              </span>
+                                            </div>
+                                           <!-- <div class="product_color font_color">
+                                                <span class="detail_label">
+                                                  color
+                                              </span>
+                                              <span class="select_color">
+                                                  <ul class="list-unstyled list-inline">
+                                                      <li><a href="javascript:void(0);"><span class="green"></span></a></li>
+                                                      <li><a href="javascript:void(0);"><span class="grey"></span></a></li>
+                                                  </ul>
+                                              </span>
+                                            </div>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="detail_row select_font_style">
+                                            
+                                               <span class="select_font_style">
+                                                        <select class="selectpicker" name="msg-font">
+                                                            <option disabled selected>Font Style</option>
+                                                            <option>Mocha</option>
+                                                            <option>Vanilla</option>
+                                                            <option>chocolate</option>
+                                                            <option>black forest</option>
+                                                            <option>orange</option>
+                                                       </select>
+                                              </span>
+                                        </div>
+                                         <div class="detail_row" style="display:none">
+                                       <a href="javascript:void(0);" class="share_social">
+                                          
+                                       </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+        <a class="collapsed ptitle3" role="button"  data-parent="#accordion2"  aria-expanded="false" aria-controls="collapseThree">
+          Extra Accessories<span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                       <div class="detail_row select_accessories">
+                                       <span>
+                                            <input type="checkbox" name="Toppings" id="Toppings" class="css-checkbox" value="Toppings" />
+                                            <label for="Toppings" class="css-label">Toppings</label>
+                                       </span>
+                                       <span>
+                                            <input type="checkbox" name="Gift" id="Gift" class="css-checkbox" value="Gift Box" checked="checked" />
+                                            <label for="Gift" class="css-label">Gift Box</label>
+                                       </span>
+                                       <span>
+                                            <input type="checkbox" name="Flowers" id="Flowers" value="Flowers" class="css-checkbox" />
+                                            <label for="Flowers" class="css-label">Flowers</label>
+                                       </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h4 class="panel-title">
+        <a class="collapsed ptitle4" role="button"  data-parent="#accordion2"  aria-expanded="false" aria-controls="collapseFour">
+          Check delivery schedule<span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="panel-body">
+                                        <div class="delivery_schedule">
+                                            <!--<p>
+                                                Enter your pincode to find the delivery options
+at your location:
+                                            </p>-->
+                                            <!--<div class="pin_text">
+                                                <input hidden="true" type="text" placeholder="Pincode">
+                                                <a href="javascript:void(0);" class="sub_pin">
+                                                    <img alt="img" src="<?php echo $this->getSkinUrl(); ?>images/left_arrow.png">
+                                                </a>
+                                            </div>-->
+                                            <p>
+                                                Location: Ahmedabad, Gujarat
+                                            </p>
+                                            <p>
+                                                Deliverytime: Estimated Delivery time
+                                            </p>
+                                            <p>
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro_det_div3">
+                        <a href="<?php echo $this->getUrl() ?>" class="p_d_continue_shopng"><img src="<?php echo $this->getSkinUrl(); ?>images/left_arrow.png" alt="img">continue shopping</a>
+                        <div class="p_d_butons">
+                            <a href="<?php echo $this->getUrl() ?>recently_view/?___store=default">Recently viewed</a>
+                            <a href="<?php echo $this->getUrl() ?>morelike">More like  this</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+			
+        </div>
+		 <div class="clearer"></div>
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                <?php endif;?>
+            </div>
+            
+        </form>
+		<script type="text/javascript">
+        //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                 form.action = url;
+             }
+             var e = null;
+             try {
+                this.form.submit();
+            } catch (e) {
+            }
+            this.form.action = oldUrl;
+            if (e) {
+                throw e;
+            }
+
+            if (button && button != 'undefined') {
+                button.disabled = true;
+            }
+        }
+    }.bind(productAddToCartForm);
+
+    productAddToCartForm.submitLight = function(button, url){
+        if(this.validator) {
+            var nv = Validation.methods;
+            delete Validation.methods['required-entry'];
+            delete Validation.methods['validate-one-required'];
+            delete Validation.methods['validate-one-required-by-name'];
+                    // Remove custom datetime validators
+                    for (var methodName in Validation.methods) {
+                        if (methodName.match(/^validate-datetime-.*/i)) {
+                            delete Validation.methods[methodName];
+                        }
+                    }
+
+                    if (this.validator.validate()) {
+                        if (url) {
+                            this.form.action = url;
+                        }
+                        this.form.submit();
+                    }
+                    Object.extend(Validation.methods, nv);
+                }
+            }.bind(productAddToCartForm);
+        //]]>
+    </script>
+    </div>
+</div>
+               
+        
+
+
+</div>

@@ -36,7 +36,7 @@
     text-transform: uppercase;
     top: 0;
     transition: right 0.3s ease-in-out 0s;
-    width: 255px;
+    width: 233px;
     
     transition: right 0.3s ease-in-out 0s;
     -webkit-transition: right 0.3s ease-in-out 0s;
@@ -238,4 +238,18 @@ body.nav-expanded,
 @media (max-width: 320px) {
     nav{width: 22em;right: -22em;}
     
+}
+
+
+.main-menu li.nav-1 a .mnu_icon {
+    background: url("../images/icons.png") -198px -776px no-repeat;
+}
+
+
+.main-menu li.nav-2 a .mnu_icon {
+    background: url("../images/icons.png") -11px -776px no-repeat;
+}
+
+.main-menu li.nav-3 a .mnu_icon{
+    background: url("../images/icons.png") -59px -776px no-repeat;
 }

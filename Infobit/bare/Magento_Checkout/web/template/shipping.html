@@ -64,14 +64,14 @@
              aria-hidden="false">
             <!-- ko if: rates().length  -->
             <form class="form methods-shipping" id="co-shipping-method-form" data-bind="submit: setShippingInformation" novalidate="novalidate">
-                <div id="checkout-shipping-method-load">
-                    <table class="table-checkout-shipping-method">
+                <div id="checkout-shipping-method-load table-responsive order_summary_table">
+                    <table class="table-checkout-shipping-method table">
                         <thead>
                             <tr class="row">
-                                <th class="col col-method" data-bind="i18n: 'Select Method'"></th>
+                                <th class="col col-method" data-bind="i18n: ''"></th>
                                 <th class="col col-price" data-bind="i18n: 'Price'"></th>
                                 <th class="col col-method" data-bind="i18n: 'Method Title'"></th>
-                                <th class="col col-carrier" data-bind="i18n: 'Carrier Title'"></th>
+<!--                                 <th class="col col-carrier" data-bind="i18n: 'Carrier Title'"></th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -114,8 +114,8 @@
                             <td class="col col-method"
                                     data-bind="text: method.method_title, attr: {'id': 'label_method_' + method.method_code + '_' + method.carrier_code}"></td>
 
-                            <td class="col col-carrier"
-                                    data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></td>
+<!--                             <td class="col col-carrier" -->
+<!--                                     data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></td> -->
                         </tr>
 
                         <!-- ko if:  method.error_message -->
