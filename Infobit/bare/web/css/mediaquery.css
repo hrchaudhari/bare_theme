@@ -12,7 +12,8 @@
     .login_container{top: 180px;}
     .login_container .login_box .cwf,
     .login_container .login_box input[type="text"],
-    .login_container .login_box input[type="password"]{margin-bottom: 20px;}
+    .login_container .login_box input[type="email"],
+    .login_container .login_box input[type="password"]{margin-bottom: 18px;}
     .login_container {top: 90px;}
     .bare_slider .carousel-caption{right: 70px;}
     .bare_slider .carousel-caption h3{font-size: 60px;}

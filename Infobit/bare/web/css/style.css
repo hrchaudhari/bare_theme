@@ -193,14 +193,14 @@ textarea {
     padding: 8px 18px;
 }
 
-input[type="text"],input[type="email"] {
+input[type="text"],input[type="email"],input[type="password"] {
     
     width: auto;
     border-radius: 0px;
     margin-bottom: 20px;
     padding: 0 18px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    
     background: #f1f2f3 none repeat scroll 0 0;
     border: 0 none;
     color: #7c858c;
@@ -611,6 +611,7 @@ ul.footer_bx:after {
     border: 0;
 }
 .login_modal .modal-dialog{margin-top: 120px;}
+#R_MoDal .modal-dialog{margin-top: 0px !important;}
 .login_container {
     text-align: center;
     margin: 0px;
@@ -4580,7 +4581,7 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
 }
 /************   || 19.0 Skin Type  END  ||  *************/
 .footer.content{border:none !important;}
-.header.content{padding: 0px !important;}
+.header.content{padding: 0px !important;max-width:none !important;}
 .page-main{padding-left:0px !important;padding-right:0px !important;width:100% !important;max-width:100% !important;}
 button, .cart.table-wrapper .actions-toolbar > .action, .cart.table-wrapper .action-gift,
 button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .cart.table-wrapper .action-gift:hover{background:transparent none repeat scroll 0 0;
@@ -4687,7 +4688,8 @@ background: #7c858c none repeat scroll 0 0;
 .top_side_cart a:hover .icon.cart_icon {
 /*    background: url("../images/icons.png") no-repeat scroll -22px -66px rgba(0, 0, 0, 0);*/
 }
-.catalog-product-view .page-main,.checkout-cart-index .page-main{padding-top:90px;}
+.catalog-product-view .page-main,.checkout-cart-index .page-main,
+.customer-account-login .page-main, .customer-account-create .page-main{padding-top:90px;}
 .catalog-product-view .column.main{min-height:0px;}
 .label{color:#7c858c;font-weight:normal;font-size:18px;}
 .product-reviews-summary{   border-bottom: 1px solid #7c858c;
@@ -4821,7 +4823,7 @@ background: #7c858c none repeat scroll 0 0;
     color:#7c858c;
 }
 .order_summary_table .block .title strong{font-size: 22px !important;}
-.action.primary{background: #7c858c none repeat scroll 0 0;
+.action.primary,.action.primary:hover{background: #7c858c none repeat scroll 0 0;
     border: 1px solid #7c858c;}
 .minicart-items .item-qty{color:#7c858c;}
 .block-minicart .subtitle.empty{color:#7c858c;}
@@ -4845,7 +4847,7 @@ background: #7c858c none repeat scroll 0 0;
     content: "X";
     font-family: "NettoOT";}
 .block-minicart .block-content > .actions > .primary{margin:0px !important;}
-.footer.content{margin-top:0px;padding-top:0px;}
+.footer.content{margin-top:0px;padding-top:0px;padding-bottom:0px;}
 .product-info-main .price-box .price-wrapper .price, .product-options-bottom .price-box .price-wrapper .price{font-size:24px !important;}
 .cart-summary{padding:0px;color: #7c858c;font-family: 'NettoOT' !important;}
 .cart-price .price{color: #7c858c;}
@@ -4935,11 +4937,21 @@ border-bottom: 1px solid #7c858c;
     margin: 0 0 20px;
 }
 .columns .column.main{padding-bottom: 0px;}
-.price-container{margin-top:30px;}
 .block-minicart .block-content > .actions > .primary .action.primary{margin-bottom:0px !important;}
 .minicart-wrapper .action.showcart .counter.qty{background:none !important;color: transparent !important;}
 .page-layout-1column .product.media{width:50% !important;margin-top:-30px;}
 .page-layout-1column .product-info-main {
     margin-right: 10%;
     width: 38%;
+}
+.minicart-items .product-item-details .price{margin-top:30px !important;}
+.field-wrapper input[type="text"], .field-wrapper input[type="email"], .field-wrapper input[type="password"]{
+	margin-bottom:0px !important;
+}
+.field-wrapper{margin-bottom:17px;}
+.opc-progress-bar-item._active > span::before {
+    background: #7c858c none repeat scroll 0 0 !important;
+}
+.opc-progress-bar-item._active::before {
+    background: #7c858c none repeat scroll 0 0 !important;
 }
